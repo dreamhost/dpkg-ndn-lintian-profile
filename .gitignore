@@ -1,0 +1,4 @@
+debian/ndn-lintian-profile.debhelper.log
+debian/files
+debian/ndn-lintian-profile.substvars
+debian/ndn-lintian-profile
