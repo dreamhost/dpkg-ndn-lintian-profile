@@ -1,3 +1,9 @@
+ndn-lintian-profile (1~12.04~ppa0) precise; urgency=medium
+
+  * Build for precise.
+
+ -- Chris Weyl <chris.weyl@dreamhost.com>  Thu, 26 Mar 2015 15:27:43 -0700
+
 ndn-lintian-profile (1~14.04~ppa0) trusty; urgency=low
 
   * Initial Release.
