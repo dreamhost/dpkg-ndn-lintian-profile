@@ -1,15 +1,15 @@
 Source: ndn-lintian-profile
-Section: unknown
+Section: perl
 Priority: optional
-Maintainer: Chris Weyl <Chris Weyl <cweyl@alumni.drew.edu>>
+Maintainer: Chris Weyl <chris.weyl@dreamhost.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/ndn-lintian-profile.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/ndn-lintian-profile.git;a=summary
+Homepage: https://github.com/dreamhost/dpkg-ndn-lintian-profile
+Vcs-Git: https://github.com/dreamhost/dpkg-ndn-lintian-profile.git
+Vcs-Browser: https://github.com/dreamhost/dpkg-ndn-lintian-profile
 
 Package: ndn-lintian-profile
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Lintian profiles for NDN
+ ...to allow tag overrides for some stuff we do. *cough*
