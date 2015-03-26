@@ -1,4 +1,5 @@
 before_install:
+    - sudo apt-add-repository -y ppa:rsrchboy/ndn-perl
     - sudo apt-get update
 install:
     - sudo apt-get install -y build-essential debhelper devscripts
