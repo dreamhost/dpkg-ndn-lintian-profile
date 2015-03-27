@@ -1,3 +1,9 @@
+ndn-lintian-profile (2) UNRELEASED; urgency=medium
+
+  * ...and actually put the profile in the correct directory. *le sigh*
+
+ -- Chris Weyl <chris.weyl@dreamhost.com>  Thu, 26 Mar 2015 23:48:50 -0700
+
 ndn-lintian-profile (1~12.04~ppa0) precise; urgency=medium
 
   * Build for precise.
