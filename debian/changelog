@@ -1,3 +1,9 @@
+ndn-lintian-profile (2~12.04~ppa1) precise; urgency=medium
+
+  * Build for precise.
+
+ -- Chris Weyl <cweyl@alumni.drew.edu>  Thu, 26 Mar 2015 23:51:14 -0700
+
 ndn-lintian-profile (2) UNRELEASED; urgency=medium
 
   * ...and actually put the profile in the correct directory. *le sigh*
