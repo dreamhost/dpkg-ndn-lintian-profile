@@ -9,6 +9,7 @@ set -ex
 # fixup our repository...
 sudo apt-get install -y git-bzr-ng
 git fetch --unshallow ||:
+git checkout $TRAVIS_BRANCH
 
 # setup ssh...
 eval `ssh-agent`
