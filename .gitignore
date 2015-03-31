@@ -2,3 +2,4 @@ debian/ndn-lintian-profile.debhelper.log
 debian/files
 debian/ndn-lintian-profile.substvars
 debian/ndn-lintian-profile
+debian/travis/deploy_id

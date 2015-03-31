@@ -1,12 +1,15 @@
 language: perl
 before_install:
-- sudo apt-get update
+    - sudo apt-add-repository -y ppa:rsrchboy/ndn-perl
+    - sudo apt-get update
 install:
-- sudo apt-get install -y build-essential debhelper devscripts
+    - sudo apt-get install -y build-essential debhelper devscripts
 script:
-- debuild -S -us -uc
-- debuild -us -uc
-- sudo dpkg -i ../*.deb
-env:
-  global:
-    secure: ZqYMQKM4qsJqarUypL64uC0u0Ygls3BwfCHJTGQpSRh9g7n/xRvKxNlZX+CMcKV/ihWFkjSweMqW5VvMZlikptBJq+doXjzKb7L1UiMiFLSs/MVyPuj5vwA89dE6YiC9XAMiM+9/kC5cQ42JLcf5zMbhy9916qARLqBIrbdZ1kw=
+    - debuild -S -us -uc
+    - debuild -us -uc
+    - sudo dpkg -i ../*.deb
+after_success:
+    - openssl aes-256-cbc -K $encrypted_5a131a5e7996_key -iv $encrypted_5a131a5e7996_iv
+      -in debian/travis/deploy_id.enc -out debian/travis/deploy_id -d
+    - chmod 0600 debian/travis/deploy_id
+    - ./debian/travis.after_success
