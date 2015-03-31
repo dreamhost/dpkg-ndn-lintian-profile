@@ -1,6 +1,10 @@
 language: perl
+env:
+    matrix:
+        - PPA_REPO=ppa:rsrchboy/ndn-perl         DEPLOY=false
+        - PPA_REPO=ppa:rsrchboy/ndn-perl-testing DEPLOY=testing
 before_install:
-    - sudo apt-add-repository -y ppa:rsrchboy/ndn-perl
+    - sudo apt-add-repository -y $PPA_REPO
     - sudo apt-get update -qq
 install:
     - sudo apt-get install -y -qq build-essential debhelper devscripts
