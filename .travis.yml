@@ -17,3 +17,12 @@ after_success:
       -in debian/travis/deploy_id.enc -out debian/travis/deploy_id -d
     - chmod 0600 debian/travis/deploy_id
     - ./debian/travis.after_success
+deploy:
+    provider: packagecloud
+    username: rsrchboy
+    dist: ubuntu/precise
+    on:
+        branch: master
+        condition: "$DEPLOY = testing"
+    token:
+        secure: TMGvbThJYKA4XHCe6M+38K0k3uSzcjp4X3loT89TABVjggswqpRg412jdNYhPAk+8jipZfB3reeHhfmYnm08dlI0XpDnpHV8uB2+F7HnxgTYX4fTho641Jgo+S2V5W0JIX0ahxW6i4EenX6dd0C5sg86nP9xhTTkCCzm/sqEmBA=
