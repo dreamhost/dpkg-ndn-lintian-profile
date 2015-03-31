@@ -2,8 +2,9 @@
 
 set -ex
 
-# only do this on our master branch
-[ "$(git symbolic-ref --short HEAD)" = "master" ] || exit
+# only do this on our master branch, and if we're not a pull request
+[ "$TRAVIS_BRANCH"       = "master" ] || exit
+[ "$TRAVIS_PULL_REQUEST" = "false"  ] || exit
 
 # fixup our repository...
 sudo apt-get install -y git-bzr-ng
