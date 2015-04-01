@@ -17,6 +17,8 @@ after_success:
       -in debian/travis/deploy_id.enc -out debian/travis/deploy_id -d
     - chmod 0600 debian/travis/deploy_id
     - ./debian/travis.after_success
+before_deploy:
+    - cp ../ndn-* .
 deploy:
     provider: packagecloud
     username: rsrchboy
