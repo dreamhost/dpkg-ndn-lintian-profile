@@ -20,6 +20,7 @@ after_success:
 deploy:
     provider: packagecloud
     username: rsrchboy
+    repository: ndn-perl
     dist: ubuntu/precise
     on:
         branch: master
